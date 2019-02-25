@@ -17,3 +17,35 @@ fact: (pred obj1 obj2)
 rule: ((pred obj1 obj2) (pred obj2 obj3)) -> (pred obj1 obj3)
 
 """
+fact: (inst tile1 Tile)
+fact: (inst tile2 Tile)
+fact: (inst tile3 Tile)
+fact: (inst tile4 Tile)
+fact: (inst tile5 Tile)
+fact: (inst tile6 Tile)
+fact: (inst tile7 Tile)
+fact: (inst tile8 Tile)
+
+fact: (location tile6 pos1 pos2)
+fact: (location tile7 pos1 pos3)
+fact: (location tile8 pos3 pos2)
+fact: (location tile1 pos2 pos2)
+fact: (location tile2 pos3 pos3)
+fact: (location empty pos3 pos1)
+fact: (location tile3 pos2 pos3)
+fact: (location tile4 pos2 pos1)
+fact: (location tile5 pos1 pos1)
+
+
+fact: (equal pos1 pos1)
+fact: (equal pos2 pos2)
+fact: (equal pos3 pos3)
+
+rule: ((inst ?a Tile) (location ?a ?x1 ?y1) (location empty ?x2 ?y2) (equal ?x1 ?x2) (equal ?y1 pos2)) -> (movable ?a ?x1 ?y1 ?x2 ?y2)
+rule: ((inst ?a Tile) (location ?a ?x1 ?y1) (location empty ?x2 ?y2) (equal ?y1 ?y2) (equal ?x1 pos2)) -> (movable ?a ?x1 ?y1 ?x2 ?y2)
+rule: ((inst ?a Tile) (location ?a ?x1 ?y1) (location empty ?x2 ?y2) (equal ?x1 ?x2) (equal ?y2 pos2)) -> (movable ?a ?x1 ?y1 ?x2 ?y2)
+rule: ((inst ?a Tile) (location ?a ?x1 ?y1) (location empty ?x2 ?y2) (equal ?y1 ?y2) (equal ?x2 pos2)) -> (movable ?a ?x1 ?y1 ?x2 ?y2)
+
+
+
+
