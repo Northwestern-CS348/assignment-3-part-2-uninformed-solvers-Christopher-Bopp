@@ -1,0 +1,89 @@
+TESTS WITH ERRORS 
+test06_GM_8Puzzle_02 (gradingtests.UnitTests)
+Traceback (most recent call last):
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\gradingtests.py", line 149, in test06_GM_8Puzzle_02
+    self.assertEqual(p8.getGameState(), ((1,2,3,),(8,-1,4),(7,6,5)))
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\student_code_game_masters.py", line 165, in getGameState
+    tile = response[0].bindings[0].constant.element
+TypeError: 'bool' object is not subscriptable
+
+test08_GM_8Puzzle_04 (gradingtests.UnitTests)
+Traceback (most recent call last):
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\gradingtests.py", line 194, in test08_GM_8Puzzle_04
+    move1 = movables[0]
+TypeError: 'bool' object is not subscriptable
+
+test14_BFS_Hanoi_03 (gradingtests.UnitTests)
+Traceback (most recent call last):
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\gradingtests.py", line 314, in test14_BFS_Hanoi_03
+    [23, ((1, 4, 5), (), (2, 3))],
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\gradingtests.py", line 52, in runPlayXSteps
+    results = self.pool.apply_async(self.playXSteps, [solver, plays]).get(timeout)
+  File "C:\Program Files\Python37\lib\multiprocessing\pool.py", line 683, in get
+    raise self._value
+  File "C:\Program Files\Python37\lib\multiprocessing\pool.py", line 121, in worker
+    result = (True, func(*args, **kwds))
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\gradingtests.py", line 27, in playXSteps
+    solver.solveOneStep()
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\student_code_uninformed_solvers.py", line 128, in solveOneStep
+    self.currentState = self.myQueue.popleft()
+IndexError: pop from an empty deque
+
+test16_DFS_8Puzzle_02 (gradingtests.UnitTests)
+Traceback (most recent call last):
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\gradingtests.py", line 346, in test16_DFS_8Puzzle_02
+    solver = SolverDFS(p8,((1,2,3),(4,5,6),(7,8,-1)))
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\student_code_uninformed_solvers.py", line 6, in __init__
+    super().__init__(gameMaster, victoryCondition)
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\solver.py", line 20, in __init__
+    self.currentState = GameState(self.gm.getGameState(), 0, None)
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\student_code_game_masters.py", line 165, in getGameState
+    tile = response[0].bindings[0].constant.element
+TypeError: 'bool' object is not subscriptable
+
+test17_DFS_8Puzzle_03 (gradingtests.UnitTests)
+Traceback (most recent call last):
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\gradingtests.py", line 365, in test17_DFS_8Puzzle_03
+    solver = SolverDFS(p8,((1,2,3),(4,5,6),(7,8,-1)))
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\student_code_uninformed_solvers.py", line 6, in __init__
+    super().__init__(gameMaster, victoryCondition)
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\solver.py", line 20, in __init__
+    self.currentState = GameState(self.gm.getGameState(), 0, None)
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\student_code_game_masters.py", line 165, in getGameState
+    tile = response[0].bindings[0].constant.element
+TypeError: 'bool' object is not subscriptable
+
+test20_BFS_8Puzzle_03 (gradingtests.UnitTests)
+Traceback (most recent call last):
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\gradingtests.py", line 422, in test20_BFS_8Puzzle_03
+    solver = SolverBFS(p8,((1,2,3),(4,5,6),(7,8,-1)))
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\student_code_uninformed_solvers.py", line 65, in __init__
+    super().__init__(gameMaster, victoryCondition)
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\solver.py", line 20, in __init__
+    self.currentState = GameState(self.gm.getGameState(), 0, None)
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\student_code_game_masters.py", line 165, in getGameState
+    tile = response[0].bindings[0].constant.element
+TypeError: 'bool' object is not subscriptable
+
+-------------------------------
+TESTS FAILED  
+test07_GM_8Puzzle_03 (gradingtests.UnitTests)
+Traceback (most recent call last):
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\gradingtests.py", line 175, in test07_GM_8Puzzle_03
+    self.assertEqual(p8.getGameState(), ((5,1,4), (6,-1,8), (7,3,2)))
+AssertionError: Tuples differ: ((5, 4, -1), (6, 1, 8), (7, 3, 2)) != ((5, 1, 4), (6, -1, 8), (7, 3, 2))
+
+First differing element 0:
+(5, 4, -1)
+(5, 1, 4)
+
+- ((5, 4, -1), (6, 1, 8), (7, 3, 2))
+?       ----
+
++ ((5, 1, 4), (6, -1, 8), (7, 3, 2))
+?      +++        +
+
+
+-------------------------------
+TESTS SKIPPED 
+-------------------------------
